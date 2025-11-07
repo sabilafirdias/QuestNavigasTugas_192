@@ -65,6 +65,24 @@ fun FormDaftar(onBeranda: () -> Unit, modifier: Modifier = Modifier) {
             colors = CardDefaults.cardColors(
                 containerColor = colorResource(id = R.color.ungu1)
             )
-        ) {}
+        ) {
+            Text(
+                modifier = Modifier
+                    .padding(start = 10.dp, top = 10.dp),
+                text = "NAMA LENGKAP",
+                fontFamily = FontFamily.Serif,
+                fontWeight = FontWeight.Bold
+            )
+            OutlinedTextField(
+                value = textNama,
+                shape = MaterialTheme.shapes.large,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 12.dp, end = 12.dp),
+                label = { Text("Isian nama lengkap") },
+                onValueChange = { textNama = it }
+            )
+
+        }
     }
 }
