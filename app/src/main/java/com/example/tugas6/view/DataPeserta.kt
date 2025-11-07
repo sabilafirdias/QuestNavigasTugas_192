@@ -114,6 +114,10 @@ fun ListPeserta(onBeranda: () -> Unit, onForm: () -> Unit,  modifier: Modifier =
         Row(
             modifier = Modifier.fillMaxWidth().padding(20.dp),
             horizontalArrangement = Arrangement.SpaceBetween
-        ) {}
+        ) {
+            Button(onClick = onBeranda, colors = ButtonDefaults.buttonColors(colorResource(id = R.color.ungu1))) {
+                Text("Beranda", color = Color.Black, fontWeight = FontWeight.Bold, fontFamily = FontFamily.SansSerif)
+            }
+        }
     }
 }
