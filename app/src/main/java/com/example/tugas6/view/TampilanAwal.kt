@@ -32,7 +32,33 @@ fun HalamanDepan(onNavigate: () -> Unit, modifier: Modifier = Modifier) {
                 .background(color = colorResource(id = R.color.ungu2)),
             contentAlignment = Alignment.Center
         ) {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
 
+                Text("Selamat Datang", fontSize = 22.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Serif)
+
+                Image(
+                    painter = painterResource(id = R.drawable.logoo),
+                    contentDescription = "Logo Aplikasi",
+                    modifier = Modifier
+                        .width(350.dp)
+                        .height(350.dp)
+                )
+
+                Spacer(modifier = Modifier.height(50.dp))
+
+                Text("Sabila Firdiastuti Maulani S.", fontSize = 13.sp, fontFamily = FontFamily.Monospace, fontWeight = FontWeight.SemiBold)
+                Text("20230140192", fontSize = 13.sp, fontFamily = FontFamily.Monospace)
+
+                Spacer(modifier = Modifier.height(50.dp))
+
+                Button(onClick = onNavigate,
+                    colors = ButtonDefaults.buttonColors(colorResource(id = R.color.ungu1))
+                ) {
+                    Text("Masuk", color = Color.Black, fontWeight = FontWeight.Bold, fontFamily = FontFamily.SansSerif)
+
+                }
+
+            }
         }
     }
 }
