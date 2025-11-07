@@ -28,5 +28,13 @@ import com.example.tugas6.R
 
 @Composable
 fun ListPeserta(onBeranda: () -> Unit, onForm: () -> Unit,  modifier: Modifier = Modifier) {
-
+    Column(modifier = Modifier.padding(top = 50.dp, bottom = 25.dp)) {
+        Text(
+            modifier = Modifier.padding(top = 25.dp, start = 20.dp),
+            text = "List Daftar Peserta",
+            fontSize = 27.sp,
+            color = colorResource(id = R.color.ungu3),
+            fontFamily = FontFamily.Serif
+        )
+    }
 }
