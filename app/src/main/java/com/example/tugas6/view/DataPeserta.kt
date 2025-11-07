@@ -111,6 +111,9 @@ fun ListPeserta(onBeranda: () -> Unit, onForm: () -> Unit,  modifier: Modifier =
                 }
             }
         }
-
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(20.dp),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {}
     }
 }
