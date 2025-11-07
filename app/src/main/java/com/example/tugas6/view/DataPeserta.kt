@@ -36,5 +36,42 @@ fun ListPeserta(onBeranda: () -> Unit, onForm: () -> Unit,  modifier: Modifier =
             color = colorResource(id = R.color.ungu3),
             fontFamily = FontFamily.Serif
         )
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(200.dp)
+                .padding(16.dp)
+                .border(
+                    width = 2.dp,
+                    color = colorResource(id = R.color.ungu3),
+                    shape = RoundedCornerShape(16.dp)
+                ),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.White
+            )) {
+            Row {
+                Column (modifier = Modifier.padding(20.dp)){
+                    Text("NAMA LENGKAP", fontWeight = FontWeight.Bold)
+                    Text("Toto Sucipto")
+
+                    Spacer(modifier = Modifier.height(30.dp))
+
+                    Text("STATUS KAWIN", fontWeight = FontWeight.Bold)
+                    Text("Single")
+                }
+
+                Spacer(modifier = Modifier.width(2.dp))
+
+                Column (modifier = Modifier.padding(20.dp)){
+                    Text("JENIS KELAMIN", fontWeight = FontWeight.Bold)
+                    Text("Laki-laki")
+
+                    Spacer(modifier = Modifier.height(30.dp))
+
+                    Text("ALAMAT", fontWeight = FontWeight.Bold)
+                    Text("Kubu Raya")
+                }
+            }
+        }
     }
 }
