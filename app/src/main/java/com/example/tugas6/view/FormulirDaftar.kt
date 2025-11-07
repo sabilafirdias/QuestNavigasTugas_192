@@ -50,5 +50,14 @@ fun FormDaftar(onBeranda: () -> Unit, modifier: Modifier = Modifier) {
     val gender:List<String> = listOf("Laki-laki", "Perempuan")
     val kawin:List<String> = listOf("Single", "Taken", "HTS")
 
+    Column (modifier = Modifier.padding(top = 30.dp, bottom = 15.dp)) {
+        Text(
+            modifier = Modifier.padding(top = 25.dp, start = 20.dp),
+            text = "Formulir Pendaftaran",
+            fontSize = 27.sp,
+            color = colorResource(id = R.color.ungu3),
+            fontFamily = FontFamily.Serif
+        )
 
+    }
 }
