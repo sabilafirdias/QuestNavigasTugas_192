@@ -58,6 +58,13 @@ fun FormDaftar(onBeranda: () -> Unit, modifier: Modifier = Modifier) {
             color = colorResource(id = R.color.ungu3),
             fontFamily = FontFamily.Serif
         )
-
+        ElevatedCard (
+            modifier = Modifier
+                .padding(20.dp)
+                .fillMaxSize(),
+            colors = CardDefaults.cardColors(
+                containerColor = colorResource(id = R.color.ungu1)
+            )
+        ) {}
     }
 }
