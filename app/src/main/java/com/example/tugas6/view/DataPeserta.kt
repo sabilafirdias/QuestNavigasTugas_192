@@ -118,6 +118,9 @@ fun ListPeserta(onBeranda: () -> Unit, onForm: () -> Unit,  modifier: Modifier =
             Button(onClick = onBeranda, colors = ButtonDefaults.buttonColors(colorResource(id = R.color.ungu1))) {
                 Text("Beranda", color = Color.Black, fontWeight = FontWeight.Bold, fontFamily = FontFamily.SansSerif)
             }
+            Button(onClick = onForm, colors = ButtonDefaults.buttonColors(colorResource(id = R.color.ungu1))) {
+                Text("Formulir", color = Color.Black, fontWeight = FontWeight.Bold, fontFamily = FontFamily.SansSerif)
+            }
         }
     }
 }
