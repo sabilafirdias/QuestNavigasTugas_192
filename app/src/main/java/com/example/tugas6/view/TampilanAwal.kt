@@ -57,7 +57,6 @@ fun HalamanDepan(onNavigate: () -> Unit, modifier: Modifier = Modifier) {
                     Text("Masuk", color = Color.Black, fontWeight = FontWeight.Bold, fontFamily = FontFamily.SansSerif)
 
                 }
-
             }
         }
     }
