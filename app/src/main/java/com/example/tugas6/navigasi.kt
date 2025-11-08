@@ -18,3 +18,9 @@ enum class Navigasi {
     formu
 }
 
+@Composable
+fun DataApp(
+    navController: NavHostController = rememberNavController()
+) {
+
+}
