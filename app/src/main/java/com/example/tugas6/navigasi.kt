@@ -22,5 +22,45 @@ enum class Navigasi {
 fun DataApp(
     navController: NavHostController = rememberNavController()
 ) {
+    Scaffold { isiRuang ->
+        NavHost(
+            navController = navController,
+            startDestination = Navigasi.cover.name,
+            modifier = Modifier.padding(isiRuang)
+        ) {
 
+            // --- Halaman Depan ---
+            composable(route = Navigasi.cover.name) {
+                HalamanDepan(
+                    onNavigate = {
+                        navController.navigate(Navigasi.daftar.name)
+                    }
+                )
+            }
+
+            // --- List Peserta ---
+            composable(route = Navigasi.daftar.name) {
+                ListPeserta(
+                    onBeranda = {
+                        navController.navigate(Navigasi.cover.name)
+                    },
+                    onForm = {
+                        navController.navigate(Navigasi.formu.name)
+                    }
+                )
+            }
+
+            // --- Form Pendaftaran ---
+            composable(route = Navigasi.formu.name) {
+                FormDaftar(
+                    onBeranda = {
+                        navController.popBackStack(
+                            route = Navigasi.daftar.name,
+                            inclusive = false
+                        )
+                    }
+                )
+            }
+        }
+    }
 }
