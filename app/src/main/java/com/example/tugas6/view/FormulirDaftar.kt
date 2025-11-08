@@ -170,6 +170,19 @@ fun FormDaftar(onBeranda: () -> Unit, modifier: Modifier = Modifier) {
             }
         }
 
-
+        if (showDialog) {
+            androidx.compose.material3.AlertDialog(
+                onDismissRequest = { showDialog = false },
+                title = { Text("Data Berhasil Disimpan", fontWeight = FontWeight.Bold, fontFamily = FontFamily.SansSerif) },
+                text = {
+                    Text("Nama : $textNama\nJenis Kelamin : $textJK\nStatus : $textStatus\nAlamat : $textAlamat", fontFamily = FontFamily.SansSerif)
+                },
+                confirmButton = {
+                    Button(onClick = { showDialog = false }, colors = ButtonDefaults.buttonColors(colorResource(id = R.color.ungu3))) {
+                        Text("OK")
+                    }
+                }
+            )
+        }
     }
 }
