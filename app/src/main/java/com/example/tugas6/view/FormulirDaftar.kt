@@ -66,9 +66,8 @@ fun FormDaftar(onBeranda: () -> Unit, modifier: Modifier = Modifier) {
                 containerColor = colorResource(id = R.color.ungu1)
             )
         ) {
-            Text(
-                modifier = Modifier
-                    .padding(start = 10.dp, top = 10.dp),
+            Text(modifier = Modifier
+                .padding(start = 10.dp, top = 10.dp),
                 text = "NAMA LENGKAP",
                 fontFamily = FontFamily.Serif,
                 fontWeight = FontWeight.Bold
@@ -82,6 +81,32 @@ fun FormDaftar(onBeranda: () -> Unit, modifier: Modifier = Modifier) {
                 label = { Text("Isian nama lengkap") },
                 onValueChange = { textNama = it }
             )
+
+            Text(modifier = Modifier
+                .padding(start = 10.dp, top = 10.dp),
+                text = "JENIS KELAMIN",
+                fontFamily = FontFamily.Serif,
+                fontWeight = FontWeight.Bold
+            )
+            Row {
+                gender.forEach { item ->
+                    Row(modifier = Modifier.selectable(
+                        selected = textJK == item,
+
+                        onClick = { textJK = item }
+                    ), verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                        RadioButton(
+                            selected = textJK == item,
+
+                            onClick = {
+                                textJK = item
+                            })
+                        Text(item)
+                    }
+                }
+            }
+
 
         }
     }
