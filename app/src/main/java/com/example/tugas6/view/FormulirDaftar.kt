@@ -107,6 +107,28 @@ fun FormDaftar(onBeranda: () -> Unit, modifier: Modifier = Modifier) {
                 }
             }
 
+            Text(modifier = Modifier
+                .padding(start = 10.dp, top = 10.dp),
+                text = "STATUS KAWIN",
+                fontFamily = FontFamily.Serif,
+                fontWeight = FontWeight.Bold
+            )
+            Row {
+                kawin.forEach { item ->
+                    Row(modifier = Modifier.selectable(
+                        selected = textStatus == item,
+                        onClick = { textStatus = item }
+                    ), verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(
+                            selected = textStatus == item,
+                            onClick = {
+                                textStatus = item
+                            })
+                        Text(item)
+                    }
+                }
+            }
+
 
         }
     }
