@@ -148,7 +148,28 @@ fun FormDaftar(onBeranda: () -> Unit, modifier: Modifier = Modifier) {
                 }
             )
 
+            Spacer(modifier = Modifier.height(140.dp))
 
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(top = 20.dp),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Button(modifier = Modifier
+                    .padding(start = 10.dp),
+                    onClick = { onBeranda() }, colors = ButtonDefaults.buttonColors(colorResource(id = R.color.ungu2))) {
+                    Text("Kembali", color = Color.Black, fontWeight = FontWeight.Bold, fontFamily = FontFamily.SansSerif)
+                }
+
+                Button(modifier = Modifier
+                    .padding(end = 10.dp),
+                    onClick = {
+                    showDialog = true
+                }, colors = ButtonDefaults.buttonColors(colorResource(id = R.color.ungu2))) {
+                    Text("Submit", color = Color.Black, fontWeight = FontWeight.Bold, fontFamily = FontFamily.SansSerif)
+                }
+            }
         }
+
+
     }
 }
